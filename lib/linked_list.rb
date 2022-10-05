@@ -31,6 +31,13 @@ class LinkedList
   end
 
   def to_string
-    require 'pry' ; binding.pry
+    return "" if !@head
+    string = ""
+    temp = self.head
+		while (temp != nil) 
+			string << temp.data + " "
+      temp = temp.next_node
+		end
+    string.chop
   end
 end

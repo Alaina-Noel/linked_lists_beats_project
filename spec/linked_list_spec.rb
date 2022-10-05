@@ -26,10 +26,10 @@ RSpec.describe LinkedList do
   describe '#to_string' do
     it 'can generate a string of all element in the list separated by a space' do
       @list.append("doop")
-      @list.append("BEEP")
+      @list.append("RAT")
       @list.append("BEEP BEEP")
 
-      expect(@list.to_string).to eq("doop BEEP BEEP BEEP")
+      expect(@list.to_string).to eq("doop RAT BEEP BEEP")
     end
   end
 
