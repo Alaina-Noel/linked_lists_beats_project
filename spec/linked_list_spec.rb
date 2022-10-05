@@ -15,11 +15,21 @@ RSpec.describe LinkedList do
 
   describe '#append(string)' do
     it 'can append something to the a list' do
-      expect(@list.node.data).to be(nil)
       @list.append("doop")
-      expect(@list.head.next_node).to be(nil)
-      expect(@list.count).to eq(1)
-      expect(@list.to_string).to eq("doop")
+      @list.append("BEEP")
+      @list.append("BEEP BEEP")
+
+      expect(@list.count).to eq(3)
+    end
+  end
+
+  describe '#to_string' do
+    it 'can generate a string of all element in the list separated by a space' do
+      @list.append("doop")
+      @list.append("BEEP")
+      @list.append("BEEP BEEP")
+
+      expect(@list.to_string).to eq("doop BEEP BEEP BEEP")
     end
   end
 
