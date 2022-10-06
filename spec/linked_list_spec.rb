@@ -33,4 +33,18 @@ RSpec.describe LinkedList do
     end
   end
 
+  describe 'integration of methods' do
+    it 'can change the head and change the node of that head' do
+      expect(@list.head).to be(nil)
+      @list.append("doop")
+      expect(@list.head.next_node).to be(nil)
+      @list.append("RAT")
+      expect(@list.head.next_node.data).to eq("RAT")
+      expect(@list.count).to eq(2)
+      expect(@list.to_string).to eq("doop RAT")
+    end
+  end
+
+  
+
 end
