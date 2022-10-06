@@ -19,6 +19,7 @@ class LinkedList
     return node if !node.next_node while (node = node.next_node)
   end
 
+
   def count
     return 0 if !@head
     temp = self.head
