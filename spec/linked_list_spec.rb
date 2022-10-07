@@ -48,17 +48,17 @@ RSpec.describe LinkedList do
   describe '#prepend' do
     it 'can add an element to the beginning of the list' do
       expect(@list.head).to be(nil)
-      @list.append("plop")
-      expect(@list.to_string).to eq("plop")
-      @list.append("suu")
-      @list.prepend("dop")
-      expect(@list.to_string).to eq("dop plop suu")
+      @list.append("Noel")
+      expect(@list.to_string).to eq("Noel")
+      @list.append("Kneiling")
+      @list.prepend("Alaina")
+      expect(@list.to_string).to eq("Alaina Noel Kneiling")
       expect(@list.count).to eq(3)
     end
   end
 
   describe '#insert(position, value)' do
-    it 'can insert an element at a given node position of the list' do
+    xit 'can insert an element at a given node position of the list' do
       expect(@list.head).to be(nil)
       @list.append("plop")
       expect(@list.to_string).to eq("plop")

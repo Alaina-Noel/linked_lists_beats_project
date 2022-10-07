@@ -41,4 +41,10 @@ class LinkedList
 		end
     string.chop
   end
+
+  def prepend(value)
+    first_name = Node.new(value)
+    first_name.next_node = self.head
+    @head = first_name
+  end
 end
