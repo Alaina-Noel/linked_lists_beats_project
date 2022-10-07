@@ -1,5 +1,5 @@
 class LinkedList
-  attr_reader :head
+  attr_accessor :head
 
   def initialize
     @head = nil
@@ -47,4 +47,16 @@ class LinkedList
     first_name.next_node = self.head
     @head = first_name
   end
+
+  def insert(position, value)
+    prepend(value) if position == 0
+    append(value) if position >= count
+    temp_node = Node.new(value)
+    new_list = LinkedList.new
+    until new_list.count == position
+    new_list.append(next_node)
+    end
+    new_list
+  end
+
 end

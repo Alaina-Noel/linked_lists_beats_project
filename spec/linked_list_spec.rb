@@ -58,7 +58,7 @@ RSpec.describe LinkedList do
   end
 
   describe '#insert(position, value)' do
-    xit 'can insert an element at a given node position of the list' do
+    it 'can insert an element at a given node position of the list' do
       expect(@list.head).to be(nil)
       @list.append("plop")
       expect(@list.to_string).to eq("plop")
